@@ -45,6 +45,9 @@ def collideRectCircle(rx, ry, rw, rh, cx, cy, diameter):
   else:
 
     return False
+j=50
+h=50
+g=255
 dirX=10
 x=10
 c=10
@@ -68,6 +71,7 @@ def setup():
 
 def draw():
     
+    global g
     global r
     global t
     global Y
@@ -76,6 +80,8 @@ def draw():
     global o
     global p
     global l
+    global h
+    global j
     global v
     global b
     global dirY
@@ -113,13 +119,13 @@ def draw():
             dirY=6 
     
     rect(432,465,20,200)
-    background(32,124,144) 
+    background(2) 
     rect(432,465,v,b)
     rect(332,535,r,t)
     rect(782,665,Y,u)
     rect(212,225,i,o)
     rect(479,344,p,l)
-    ellipse(c,y,50,50)
+    ellipse(c,y,j,h)
     rect(x,850,150,30)
     c=c+dirC
     text(sf,80,25)
@@ -141,7 +147,7 @@ def draw():
     if y<1:
         dirY=8
     if y >900:
-        fill(255,0,0)
+        fill(g,0,0)
         textSize(60)
         text("game over",400,400)
         textAlign(CENTER,CENTER)
@@ -152,6 +158,14 @@ def draw():
             x=x+10
         if key=='a':
             x=x-10
-        if key=='e':
+        if 1key=='e':
             exit()
-    
+    if i==0:вв
+        fill(0,245,0)
+        textSize(80)
+        text("YOU WIN",400,400)
+        textAlign(CENTER,CENTER)
+        dirC=0
+        dirY=0
+        h=h=0
+        j=j=1
